@@ -9,8 +9,14 @@ All developed inside a docker container
 # To Run
 
 ```sh
-# To Develop on
+# Copy the .env.template and add your vars
+cp .env.template .env
+
+# To Develop
 sh run-container.sh
+
+# Once Running
+npm start
 
 # To create a second window
 ##   Get a list of currently running containers
