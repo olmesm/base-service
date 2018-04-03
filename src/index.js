@@ -4,7 +4,7 @@ const express = require('express');
 const routes = require('./routes');
 
 // eslint-disable-next-line no-unused-vars
-const { error } = require('./services/logger');
+const { error } = require('./services/server-logger');
 const middleware = require('./middleware');
 
 const { PORT } = process.env;
