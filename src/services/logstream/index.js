@@ -1,13 +1,13 @@
 const fs = require('fs');
 const rfs = require('rotating-file-stream');
 
-function createLogstream({ path, interval, isSaveEnabled }) {
+function createLogstream({ logPath, interval, isSaveEnabled }) {
   if (isSaveEnabled === 'true') {
-    if (fs.existsSync(path)) fs.mkdirSync(path);
+    if (!fs.existsSync(logPath)) fs.mkdirSync(logPath);
 
     return rfs('access.log', {
       interval,
-      path,
+      path: logPath,
     });
   }
 
